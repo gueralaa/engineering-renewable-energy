@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="منصة تعليمية مجانية للهندسة الميكانيكية والطاقات المتجددة. دروس ومحاضرات وتمارين وموارد جامعية.">
+  <meta name="theme-color" content="#102d43">
+  <title>Engineering & Renewable Energy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#102d43;--navy2:#173f55;--green:#1d9a78;--mint:#dff5ec;--ink:#193447;--muted:#667b88;--paper:#f5f8f8;--white:#fff;--line:#e2eaeb}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Cairo",sans-serif}
+    body.en,body.fr{font-family:Inter,Arial,sans-serif} a{text-decoration:none;color:inherit} button{font:inherit;cursor:pointer}
+    .container{width:min(1160px,92%);margin:auto}
+    header{background:rgba(16,45,67,.97);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 8px 25px #0c29351c}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:11px;font-family:Inter,sans-serif;font-weight:800;letter-spacing:-.5px}
+    .brand-mark{width:42px;height:42px;border-radius:13px;background:var(--green);display:grid;place-items:center;font-size:22px}
+    .brand small{display:block;color:#b8d6d9;font-size:10px;letter-spacing:1.6px;font-weight:600;margin-top:2px}
+    .navlinks{display:flex;gap:25px;align-items:center;color:#dce8eb;font-size:14px}
+    .navlinks a:hover{color:#7ee0bd}.nav-actions{display:flex;align-items:center;gap:10px}
+    select{background:#21485b;color:#fff;border:1px solid #456779;border-radius:10px;padding:9px 12px}
+    .menu-btn{display:none;background:transparent;border:1px solid #527181;color:#fff;border-radius:10px;padding:8px 11px}
+    .hero{background:radial-gradient(circle at 15% 20%,#1c665f 0,transparent 31%),linear-gradient(115deg,#102d43,#173f55 70%,#145b58);color:#fff;overflow:hidden;position:relative}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid #ffffff18;border-radius:50%;right:-140px;bottom:-260px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px;padding:82px 0 88px;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:#a9f0d5;background:#ffffff12;border:1px solid #ffffff24;padding:7px 13px;border-radius:99px;font-size:13px}
+    h1{font-size:clamp(36px,5vw,58px);line-height:1.25;margin:20px 0 17px;font-weight:800;letter-spacing:-1.3px}
+    .hero p{font-size:17px;color:#d2e3e7;line-height:1.95;max-width:620px;margin:0 0 28px}
+    .btns{display:flex;gap:12px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:13px 21px;font-weight:700;display:inline-flex;align-items:center;gap:9px}
+    .btn-primary{background:var(--green);color:white;box-shadow:0 10px 24px #0a171d35}.btn-primary:hover{background:#168667;transform:translateY(-1px)}
+    .btn-outline{background:#ffffff10;color:#fff;border:1px solid #ffffff45}.btn-outline:hover{background:#ffffff1c}
+    .hero-art{min-height:350px;position:relative;display:grid;place-items:center}
+    .orbit{width:300px;height:300px;border:1px solid #ffffff35;border-radius:50%;display:grid;place-items:center;position:relative;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff05}
+    .sun{width:128px;height:128px;border-radius:50%;background:linear-gradient(145deg,#a9efca,#35b68d);display:grid;place-items:center;color:#103e43;font-size:55px;box-shadow:0 0 65px #59d5a866}
+    .float-card{position:absolute;background:#fff;color:var(--ink);padding:13px 16px;border-radius:14px;box-shadow:0 15px 35px #071b2b40;font-size:13px;font-weight:700}
+    .float-card span{display:block;color:var(--muted);font-size:11px;font-weight:500}
+    .fc1{top:38px;right:0}.fc2{bottom:40px;left:0}.fc3{bottom:5px;right:50px}
+    section{padding:72px 0}.section-head{text-align:center;max-width:690px;margin:0 auto 36px}.section-head .tag{color:var(--green);font-weight:800;font-size:13px;letter-spacing:1px}.section-head h2{font-size:32px;margin:8px 0;color:var(--navy)}.section-head p{color:var(--muted);line-height:1.8;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;transition:.2s;box-shadow:0 8px 25px #163d4d08}
+    .card:hover{transform:translateY(-4px);box-shadow:0 15px 35px #163d4d12}
+    .card-icon{width:52px;height:52px;border-radius:15px;background:var(--mint);display:grid;place-items:center;font-size:25px;margin-bottom:17px}
+    .card h3{margin:0 0 8px;color:var(--navy);font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}.card a{display:inline-flex;margin-top:17px;color:var(--green);font-weight:800;font-size:13px}
+    .features{background:#eaf3f2}.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}.feature-panel{background:var(--navy);color:#fff;padding:32px;border-radius:22px;min-height:290px;position:relative;overflow:hidden}.feature-panel:after{content:"⚙";position:absolute;font-size:210px;opacity:.07;left:10px;bottom:-80px}.feature-panel h3{font-size:25px;margin:0 0 12px}.feature-panel p{color:#c8dce0;line-height:1.9;max-width:430px}.feature-list{display:grid;gap:17px}.feature-item{display:flex;gap:13px;align-items:flex-start}.check{width:28px;height:28px;border-radius:9px;background:#d8f4e9;color:#168667;display:grid;place-items:center;flex:none;font-weight:900}.feature-item b{display:block;color:var(--navy);margin-bottom:3px}.feature-item span{font-size:13px;color:var(--muted);line-height:1.7}
+    .cta{background:linear-gradient(110deg,#14384f,#14614f);color:#fff;border-radius:24px;padding:38px;display:flex;justify-content:space-between;align-items:center;gap:25px}.cta h2{margin:0 0 8px;font-size:27px}.cta p{margin:0;color:#d0e4e4}
+    footer{background:#0c2638;color:#d3e1e5;padding:38px 0 22px}.footer-top{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}.footer-brand p{color:#9eb4bd;font-size:13px;max-width:370px;line-height:1.8}.footer-links{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:#c6d8de}.copyright{border-top:1px solid #ffffff18;margin-top:25px;padding-top:18px;color:#8ea7b1;font-size:12px;text-align:center}
+    .notice{position:fixed;bottom:18px;left:18px;background:#102d43;color:#fff;padding:12px 16px;border-radius:12px;box-shadow:0 10px 30px #0002;display:none;z-index:20;font-size:13px}
+    [dir="ltr"] .fc1{right:auto;left:0}[dir="ltr"] .fc2{left:auto;right:0}[dir="ltr"] .fc3{right:auto;left:50px}
+    @media(max-width:850px){.navlinks{display:none;position:absolute;top:76px;left:4%;right:4%;background:#173f55;padding:18px;border-radius:14px;flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.menu-btn{display:block}.hero-grid{grid-template-columns:1fr;padding:60px 0}.hero-art{min-height:280px}.cards{grid-template-columns:repeat(2,1fr)}.feature-grid{grid-template-columns:1fr}.footer-top{flex-direction:column}}
+    @media(max-width:560px){.brand{font-size:12px}.brand-mark{width:38px;height:38px}.hero-grid{padding:48px 0}.hero-art{transform:scale(.85);margin:-10px 0}.cards{grid-template-columns:1fr}section{padding:55px 0}.section-head h2{font-size:27px}.cta{padding:26px;align-items:flex-start;flex-direction:column}.cta h2{font-size:23px}.nav{min-height:68px}.navlinks{top:68px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Engineering and Renewable Energy">
+      <span class="brand-mark">⚡</span>
+      <span>ENGINEERING & ENERGY<small>LEARN • INNOVATE • BUILD</small></span>
+    </a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#home" data-i18n="navHome">الرئيسية</a><a href="#fields" data-i18n="navFields">التخصصات</a><a href="#resources" data-i18n="navResources">الموارد</a><a href="#about" data-i18n="navAbout">عن المنصة</a>
+    </nav>
+    <div class="nav-actions">
+      <select id="language" aria-label="Choose language"><option value="ar">العربية</option><option value="fr">Français</option><option value="en">English</option></select>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow" data-i18n="eyebrow">✦ منصة تعليمية جامعية مجانية</span>
+        <h1 data-i18n="heroTitle">بوابتك نحو مستقبل الهندسة والطاقة</h1>
+        <p data-i18n="heroText">اكتشف عالماً من المعرفة الهندسية والطاقات المتجددة. تعلّم، حمّل المحاضرات، وطوّر مهاراتك من خلال موارد تعليمية مجانية موجهة لطلاب الجامعات.</p>
+        <div class="btns"><a class="btn btn-primary" href="#fields" data-i18n="startBtn">استكشف التخصصات <span>←</span></a><a class="btn btn-outline" href="#resources" data-i18n="resourcesBtn">اكتشف الموارد</a></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit"><div class="sun">☀</div></div>
+        <div class="float-card fc1">☀ <span data-i18n="solarCard">الطاقة الشمسية</span></div>
+        <div class="float-card fc2">⚙ <span data-i18n="mechCard">التصميم الميكانيكي</span></div>
+        <div class="float-card fc3">♻ <span data-i18n="greenCard">مستقبل مستدام</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fields">
+    <div class="container">
+      <div class="section-head"><div class="tag" data-i18n="fieldsTag">مجالات التعلّم</div><h2 data-i18n="fieldsTitle">تخصصات تصنع المستقبل</h2><p data-i18n="fieldsText">مسارات تعليمية تجمع بين الأساس العلمي والتطبيق العملي في أهم مجالات الهندسة والطاقة.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">⚙️</div><h3 data-i18n="mechTitle">الهندسة الميكانيكية</h3><p data-i18n="mechText">مقاومة المواد، التصميم الميكانيكي، الديناميكا الحرارية، والآلات.</p><a href="#resources" data-i18n="explore">استكشف الموارد ←</a></article>
+        <article class="card"><div class="card-icon">☀️</div><h3 data-i18n="solarTitle">الطاقة الشمسية</h3><p data-i18n="solarText">الخلايا الكهروضوئية، الأنظمة الشمسية، والتحجيم والتركيب.</p><a href="#resources" data-i18n="explore">استكشف الموارد ←</a></article>
+        <article class="card"><div class="card-icon">🌬️</div><h3 data-i18n="windTitle">طاقة الرياح</h3><p data-i18n="windText">توربينات الرياح، تحويل الطاقة، وتقييم الموارد الهوائية.</p><a href="#resources" data-i18n="explore">استكشف الموارد ←</a></article>
+        <article class="card"><div class="card-icon">🔥</div><h3 data-i18n="thermalTitle">الطاقة الحرارية</h3><p data-i18n="thermalText">انتقال الحرارة، المجمعات الشمسية، والأنظمة الحرارية.</p><a href="#resources" data-i18n="explore">استكشف الموارد ←</a></article>
+        <article class="card"><div class="card-icon">🔋</div><h3 data-i18n="storageTitle">تخزين الطاقة</h3><p data-i18n="storageText">البطاريات، أنظمة التخزين، وإدارة الطاقة.</p><a href="#resources" data-i18n="explore">استكشف الموارد ←</a></article>
+        <article class="card"><div class="card-icon">💻</div><h3 data-i18n="softwareTitle">البرامج الهندسية</h3><p data-i18n="softwareText">مدخل إلى MATLAB وPython وSolidWorks وأدوات المحاكاة.</p><a href="#resources" data-i18n="explore">استكشف الموارد ←</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="resources">
+    <div class="container feature-grid">
+      <div class="feature-panel"><span class="eyebrow" data-i18n="resourcesTag">موارد مفتوحة للجميع</span><h3 data-i18n="resourcesTitle">تعلّم بطريقتك وفي وقتك</h3><p data-i18n="resourcesDesc">نطمح إلى جمع موارد جامعية منظمة تساعدك على الفهم والتطبيق والاستعداد للامتحانات، أينما كنت.</p><a class="btn btn-primary" href="mailto:contact@example.com?subject=طلب%20إضافة%20مورد" data-i18n="suggestBtn">اقترح مورداً تعليمياً</a></div>
+      <div class="feature-list">
+        <div class="feature-item"><div class="check">✓</div><div><b data-i18n="pdfTitle">ملفات ومحاضرات PDF</b><span data-i18n="pdfText">ملخصات ودروس منظمة حسب التخصص والمقياس.</span></div></div>
+        <div class="feature-item"><div class="check">✓</div><div><b data-i18n="exTitle">تمارين وتطبيقات</b><span data-i18n="exText">تدرب على حل المسائل الهندسية خطوة بخطوة.</span></div></div>
+        <div class="feature-item"><div class="check">✓</div><div><b data-i18n="videoTitle">مصادر فيديو تعليمية</b><span data-i18n="videoText">روابط لمصادر وشروحات مرئية مفيدة.</span></div></div>
+        <div class="feature-item"><div class="check">✓</div><div><b data-i18n="multiTitle">ثلاث لغات</b><span data-i18n="multiText">واجهة بالعربية والفرنسية والإنجليزية.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="cta"><div><h2 data-i18n="ctaTitle">المعرفة الهندسية للجميع</h2><p data-i18n="ctaText">منصة مجانية، ومجتمع يتعلّم ويشارك المعرفة لبناء مستقبل أفضل.</p></div><a class="btn btn-primary" href="mailto:contact@example.com" data-i18n="contactBtn">تواصل معنا</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="brand"><span class="brand-mark">⚡</span><span>ENGINEERING & ENERGY<small>LEARN • INNOVATE • BUILD</small></span></div><p data-i18n="footerText">منصة تعليمية مجانية تهدف إلى دعم طلاب الهندسة والطاقات المتجددة بالمعرفة والموارد.</p></div>
+      <div class="footer-links"><a href="#home" data-i18n="navHome">الرئيسية</a><a href="#fields" data-i18n="navFields">التخصصات</a><a href="#resources" data-i18n="navResources">الموارد</a><a href="#about" data-i18n="navAbout">عن المنصة</a></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Engineering & Renewable Energy — <span data-i18n="rights">جميع الحقوق محفوظة</span></div>
+  </div>
+</footer>
+<div class="notice" id="notice" role="status"></div>
+<script>
+const translations={
+ar:{dir:"rtl",navHome:"الرئيسية",navFields:"التخصصات",navResources:"الموارد",navAbout:"عن المنصة",eyebrow:"✦ منصة تعليمية جامعية مجانية",heroTitle:"بوابتك نحو مستقبل الهندسة والطاقة",heroText:"اكتشف عالماً من المعرفة الهندسية والطاقات المتجددة. تعلّم، حمّل المحاضرات، وطوّر مهاراتك من خلال موارد تعليمية مجانية موجهة لطلاب الجامعات.",startBtn:"استكشف التخصصات ←",resourcesBtn:"اكتشف الموارد",solarCard:"الطاقة الشمسية",mechCard:"التصميم الميكانيكي",greenCard:"مستقبل مستدام",fieldsTag:"مجالات التعلّم",fieldsTitle:"تخصصات تصنع المستقبل",fieldsText:"مسارات تعليمية تجمع بين الأساس العلمي والتطبيق العملي في أهم مجالات الهندسة والطاقة.",mechTitle:"الهندسة الميكانيكية",mechText:"مقاومة المواد، التصميم الميكانيكي، الديناميكا الحرارية، والآلات.",solarTitle:"الطاقة الشمسية",solarText:"الخلايا الكهروضوئية، الأنظمة الشمسية، والتحجيم والتركيب.",windTitle:"طاقة الرياح",windText:"توربينات الرياح، تحويل الطاقة، وتقييم الموارد الهوائية.",thermalTitle:"الطاقة الحرارية",thermalText:"انتقال الحرارة، المجمعات الشمسية، والأنظمة الحرارية.",storageTitle:"تخزين الطاقة",storageText:"البطاريات، أنظمة التخزين، وإدارة الطاقة.",softwareTitle:"البرامج الهندسية",softwareText:"مدخل إلى MATLAB وPython وSolidWorks وأدوات المحاكاة.",explore:"استكشف الموارد ←",resourcesTag:"موارد مفتوحة للجميع",resourcesTitle:"تعلّم بطريقتك وفي وقتك",resourcesDesc:"نطمح إلى جمع موارد جامعية منظمة تساعدك على الفهم والتطبيق والاستعداد للامتحانات، أينما كنت.",suggestBtn:"اقترح مورداً تعليمياً",pdfTitle:"ملفات ومحاضرات PDF",pdfText:"ملخصات ودروس منظمة حسب التخصص والمقياس.",exTitle:"تمارين وتطبيقات",exText:"تدرب على حل المسائل الهندسية خطوة بخطوة.",videoTitle:"مصادر فيديو تعليمية",videoText:"روابط لمصادر وشروحات مرئية مفيدة.",multiTitle:"ثلاث لغات",multiText:"واجهة بالعربية والفرنسية والإنجليزية.",ctaTitle:"المعرفة الهندسية للجميع",ctaText:"منصة مجانية، ومجتمع يتعلّم ويشارك المعرفة لبناء مستقبل أفضل.",contactBtn:"تواصل معنا",footerText:"منصة تعليمية مجانية تهدف إلى دعم طلاب الهندسة والطاقات المتجددة بالمعرفة والموارد.",rights:"جميع الحقوق محفوظة"},
+fr:{dir:"ltr",navHome:"Accueil",navFields:"Domaines",navResources:"Ressources",navAbout:"À propos",eyebrow:"✦ Plateforme universitaire gratuite",heroTitle:"Votre passerelle vers l’avenir de l’ingénierie et de l’énergie",heroText:"Découvrez les sciences de l’ingénierie et les énergies renouvelables. Apprenez, consultez des cours et développez vos compétences grâce à des ressources gratuites pour les étudiants.",startBtn:"Explorer les domaines →",resourcesBtn:"Voir les ressources",solarCard:"Énergie solaire",mechCard:"Conception mécanique",greenCard:"Avenir durable",fieldsTag:"DOMAINES D’APPRENTISSAGE",fieldsTitle:"Des spécialités qui construisent l’avenir",fieldsText:"Des parcours qui associent bases scientifiques et applications pratiques en ingénierie et énergie.",mechTitle:"Génie mécanique",mechText:"Résistance des matériaux, conception mécanique, thermodynamique et machines.",solarTitle:"Énergie solaire",solarText:"Photovoltaïque, systèmes solaires, dimensionnement et installation.",windTitle:"Énergie éolienne",windText:"Éoliennes, conversion d’énergie et évaluation des ressources.",thermalTitle:"Énergie thermique",thermalText:"Transfert thermique, capteurs solaires et systèmes thermiques.",storageTitle:"Stockage de l’énergie",storageText:"Batteries, systèmes de stockage et gestion de l’énergie.",softwareTitle:"Logiciels d’ingénierie",softwareText:"Introduction à MATLAB, Python, SolidWorks et aux outils de simulation.",explore:"Explorer les ressources →",resourcesTag:"RESSOURCES OUVERTES À TOUS",resourcesTitle:"Apprenez à votre rythme",resourcesDesc:"Nous souhaitons réunir des ressources universitaires pour comprendre, pratiquer et préparer vos examens.",suggestBtn:"Proposer une ressource",pdfTitle:"Cours et fichiers PDF",pdfText:"Cours et résumés classés par spécialité et matière.",exTitle:"Exercices pratiques",exText:"Entraînez-vous à résoudre des problèmes d’ingénierie.",videoTitle:"Ressources vidéo",videoText:"Liens vers des explications et supports vidéo utiles.",multiTitle:"Trois langues",multiText:"Interface en arabe, français et anglais.",ctaTitle:"Le savoir en ingénierie pour tous",ctaText:"Une plateforme gratuite où la communauté apprend et partage ses connaissances.",contactBtn:"Nous contacter",footerText:"Une plateforme gratuite pour soutenir les étudiants en ingénierie et énergies renouvelables.",rights:"Tous droits réservés"},
+en:{dir:"ltr",navHome:"Home",navFields:"Fields",navResources:"Resources",navAbout:"About",eyebrow:"✦ Free university learning platform",heroTitle:"Your gateway to the future of engineering and energy",heroText:"Explore engineering knowledge and renewable energy. Learn, access course materials, and build your skills with free educational resources for university students.",startBtn:"Explore fields →",resourcesBtn:"Browse resources",solarCard:"Solar energy",mechCard:"Mechanical design",greenCard:"Sustainable future",fieldsTag:"LEARNING AREAS",fieldsTitle:"Fields that shape the future",fieldsText:"Learning paths combining scientific foundations with practical applications in engineering and energy.",mechTitle:"Mechanical Engineering",mechText:"Strength of materials, mechanical design, thermodynamics, and machinery.",solarTitle:"Solar Energy",solarText:"Photovoltaics, solar systems, sizing, and installation.",windTitle:"Wind Energy",windText:"Wind turbines, energy conversion, and resource assessment.",thermalTitle:"Thermal Energy",thermalText:"Heat transfer, solar collectors, and thermal systems.",storageTitle:"Energy Storage",storageText:"Batteries, storage systems, and energy management.",softwareTitle:"Engineering Software",softwareText:"Introduction to MATLAB, Python, SolidWorks, and simulation tools.",explore:"Explore resources →",resourcesTag:"OPEN RESOURCES FOR EVERYONE",resourcesTitle:"Learn at your own pace",resourcesDesc:"Our goal is to bring together university resources that help you understand, practice, and prepare for exams.",suggestBtn:"Suggest a learning resource",pdfTitle:"PDF courses and notes",pdfText:"Lessons and summaries organized by field and subject.",exTitle:"Exercises and applications",exText:"Practice solving engineering problems step by step.",videoTitle:"Video learning resources",videoText:"Links to useful educational videos and explanations.",multiTitle:"Three languages",multiText:"An interface in Arabic, French, and English.",ctaTitle:"Engineering knowledge for everyone",ctaText:"A free platform and community learning and sharing knowledge for a better future.",contactBtn:"Contact us",footerText:"A free learning platform supporting engineering and renewable energy students with knowledge and resources.",rights:"All rights reserved"}
+};
+const language=document.getElementById("language");
+function setLanguage(lang){const t=translations[lang]||translations.ar;document.documentElement.lang=lang;document.documentElement.dir=t.dir;document.body.className=lang==="ar"?"":"en";if(lang==="fr")document.body.className="fr";document.querySelectorAll("[data-i18n]").forEach(el=>{const key=el.dataset.i18n;if(t[key])el.textContent=t[key]});language.value=lang;localStorage.setItem("ere-language",lang)}
+language.addEventListener("change",e=>setLanguage(e.target.value));
+document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("navlinks").classList.toggle("open"));
+document.querySelectorAll(".navlinks a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navlinks").classList.remove("open")));
+document.getElementById("year").textContent=new Date().getFullYear();
+setLanguage(localStorage.getItem("ere-language")||"ar");
+</script>
+</body>
+</html>
